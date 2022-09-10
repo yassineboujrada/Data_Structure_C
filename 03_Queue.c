@@ -88,7 +88,7 @@ void clear(Queue* queue) {
 }
 
 
-int main(int argc, char const *argv[])
+int main()
 {
     Queue* queue = initQueue();
     

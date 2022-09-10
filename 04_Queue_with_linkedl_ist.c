@@ -15,7 +15,6 @@ void enqueue(int val)
     newNode->data = val;
     newNode->next = NULL;
 
-    //if it is the first node
     if(front == NULL && rear == NULL)
         //make both front and rear points to the new node
         front = rear = newNode;
@@ -31,7 +30,6 @@ void enqueue(int val)
 
 void dequeue()
 {
-    //used to free the first node after dequeue
     struct node *temp;
 
     if(front == NULL)
