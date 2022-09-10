@@ -38,10 +38,10 @@ void Show_Stacks(Stack* stack) {
             printf("| %d |\n", head->data);
             head = head->next;
         }
-        printf("-----\n\n");
+        printf("\n");
     }
     else {
-        printf("Stack is empty ...");
+        printf("Stack is empty => Null");
     }
 }
 
@@ -87,16 +87,16 @@ void clear(Stack* stack){
 int main()
 {
     Stack* stack = initStack();
-    printf("size: %d - is empty: %d\n", stack->size, isEmpty(stack));
+    printf("size: %d \n", stack->size);
 
-    push(stack, 1);
-    push(stack, 2);
+    push(stack, 5);
     push(stack, 3);
-    push(stack, 4);
+    push(stack, 7);
+    push(stack, 2);
     Show_Stacks(stack);
 
 
-    printf("poped: %d\n", pop(stack));
+    printf("stack poped => %d\n", pop(stack));
     Show_Stacks(stack);
 
     // push(stack,5);
