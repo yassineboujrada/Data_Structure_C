@@ -63,10 +63,21 @@ void append(BST* tree, int data) {
 }
 
 bool search(Node* node, int data) {
-    if (node == NULL)   return false;
-    else if (node->data == data)    return true;
-    else if (node->data < data)     search(node->left, data);
-    else    search(node->right, data);
+    if (node == NULL){
+        return false;
+    }
+    else{
+        if (node->data == data) {
+            return true;
+        }
+        else{ 
+            if (node->data < data){
+                search(node->left, data);
+            }
+            else    
+                search(node->right, data);
+        }
+    }
 } 
 
 int min(Node* node){
