@@ -148,7 +148,7 @@ void printHCodes(struct MinHNode *root, int arr[], int top) {
   }
   if (isLeaf(root)) {
     printf("  %c   | ", root->item);
-    printArray(arr, top);
+    ShowArray(arr, top);
   }
 }
 
@@ -162,12 +162,12 @@ void HuffmanCodes(char item[], int freq[], int size) {
 }
 
 // Print the array
-void printArray(int arr[], int n) {
-  int i;
-  for (i = 0; i < n; ++i)
-    printf("%d", arr[i]);
-
-  printf("\n");
+void ShowArray(int arr[], int n) {
+    int i;
+    for (i = 0; i < n; ++i){
+        printf("%d", arr[i]);
+    }
+    printf("\n");
 }
 
 int main() {
